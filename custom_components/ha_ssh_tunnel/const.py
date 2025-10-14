@@ -1,4 +1,4 @@
-DOMAIN = "example.com"
+DOMAIN = "ha_ssh_tunnel"
 CONF_HOST = "host"
 CONF_PORT = "port"
 CONF_USER = "user"

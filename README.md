@@ -17,7 +17,11 @@
 
 ---
 
-## 🛠️ Установка через HACS
+
+## Установка через HACS
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=qlikwer&repository=ha_ssh_tunnel&category=integration)
+
+## Ручная установка через HACS
 
 1. Открой HACS → **Интеграции** → меню (⋮) → **Пользовательские репозитории**.
 2. Добавь ссылку на этот репозиторий, выбрав тип “Integration”.

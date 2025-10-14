@@ -1,0 +1,10 @@
+{
+  "domain": "ha_ssh_tunnel",
+  "name": "SSH Tunnel",
+  "version": "1.0.0",
+  "config_flow": true,
+  "documentation": "https://github.com/qlikwer/ha_ssh_tunnel",
+  "requirements": ["paramiko>=3.4.0"],
+  "codeowners": ["@qlikwer"],
+  "iot_class": "local_polling"
+}

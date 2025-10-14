@@ -1,0 +1,21 @@
+{
+  "title": "SSH Tunnel",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Настройка SSH туннеля",
+        "description": "Введите параметры подключения",
+        "data": {
+          "host": "Хост",
+          "port": "Порт SSH",
+          "user": "Пользователь",
+          "private_key": "Путь к приватному ключу",
+          "local_port": "Локальный порт",
+          "remote_host": "Удалённый хост",
+          "remote_port": "Удалённый порт",
+          "auto_reconnect": "Автопереподключение"
+        }
+      }
+    }
+  }
+}

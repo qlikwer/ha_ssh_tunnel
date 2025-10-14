@@ -1,0 +1,4 @@
+start_tunnel:
+  description: "Start SSH tunnel manually"
+stop_tunnel:
+  description: "Stop SSH tunnel manually"

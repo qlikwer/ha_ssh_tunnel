@@ -27,7 +27,7 @@ class SSHTunnel:
         self._thread = threading.Thread(target=self._run, daemon=True)
         self._thread.start()
 
-    def load_private_key(path):
+    def load_private_key(self, path):
         for key_class in (paramiko.Ed25519Key, paramiko.RSAKey, paramiko.ECDSAKey, paramiko.DSSKey):
             try:
                 return key_class.from_private_key_file(path)

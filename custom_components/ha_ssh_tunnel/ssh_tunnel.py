@@ -27,10 +27,18 @@ class SSHTunnel:
         self._thread = threading.Thread(target=self._run, daemon=True)
         self._thread.start()
 
+    def load_private_key(path):
+        for key_class in (paramiko.Ed25519Key, paramiko.RSAKey, paramiko.ECDSAKey, paramiko.DSSKey):
+            try:
+                return key_class.from_private_key_file(path)
+            except paramiko.ssh_exception.SSHException:
+                continue
+        raise Exception("Unsupported or invalid SSH key format")
+
     def _run(self):
         while self._running:
             try:
-                key = paramiko.RSAKey.from_private_key_file(self.private_key)
+                key = key = load_private_key(self.private_key)
                 client = paramiko.SSHClient()
                 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                 client.connect(self.host, port=self.port, username=self.user, pkey=key)

@@ -38,7 +38,7 @@ class SSHTunnel:
     def _run(self):
         while self._running:
             try:
-                key = key = load_private_key(self.private_key)
+                key = self.load_private_key(self.private_key)
                 client = paramiko.SSHClient()
                 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                 client.connect(self.host, port=self.port, username=self.user, pkey=key)
